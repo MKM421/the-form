@@ -6,7 +6,11 @@ Clone the repo:
 ```bash
 git clone https://github.com/MKM421/the-form.git
 ```
-then to start your local server run:
+Go to project
+```bash
+cd the-form
+```
+start your local server:
 ```bash
 yarn start
 ```

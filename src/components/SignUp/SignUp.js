@@ -11,6 +11,8 @@ const initialUserData = {
 
 function SignUp(props) {
 
+
+    // Validate form inputs
     const validate = (values) => {
       let errors = {};
 
@@ -43,6 +45,8 @@ function SignUp(props) {
       return errors;
     };
 
+
+    // include props from useForm
     const {
       values,
       errors,
@@ -50,14 +54,6 @@ function SignUp(props) {
       setErrors,
       setIsSubmitting
     } = useForm(initialUserData, login, validate);
-
-    function login() {
-      alert('Yay! Form submitted successfully 🎉')
-      console.log('No errors, submit callback called!');
-
-      const user = values;
-      console.log(JSON.stringify(user, null, 2));
-    }
 
 
 
@@ -107,12 +103,20 @@ function SignUp(props) {
     // OnSubmit
     const handleSubmit = (event) => {
       event.preventDefault();
-
       setErrors(validate(values));
       setIsSubmitting(true);
-
     }
 
+    // Form is successful
+    function login() {
+      // display success message
+      alert('Yay! Form submitted successfully 🎉')
+      console.log('No errors, submit callback called!');
+
+      // log values to the console
+      const user = values;
+      console.log(JSON.stringify(user, null, 2));
+    }
 
 
     return (
