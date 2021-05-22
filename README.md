@@ -10,6 +10,10 @@ Go to project
 ```bash
 cd the-form
 ```
+Install Yarn:
+```bash
+yarn install
+```
 start your local server:
 ```bash
 yarn start
