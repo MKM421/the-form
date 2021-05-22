@@ -2,7 +2,11 @@
 A sign up form created with React
 
 ## How to run the Form
-Clone the repo then run:
+Clone the repo:
+```bash
+git clone https://github.com/MKM421/the-form.git
+```
+then to start your local server run:
 ```bash
 yarn start
 ```
