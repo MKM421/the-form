@@ -41,6 +41,13 @@ function SignUp(props) {
         errors.password = 'Password must be 8 or more characters';
       }
 
+      var pw1 = document.getElementById("password1");
+      var pw2 = document.getElementById("password2");
+      if(pw1.value !== pw2.value)
+      {
+      	errors.password = 'Passwords did not match';
+      } 
+
 
       return errors;
     };
@@ -97,6 +104,7 @@ function SignUp(props) {
     	else if(input.length > 3){target.value = `(${zip}) ${middle}`;}
     	else if(input.length > 0){target.value = `(${zip}`;}
     };
+
 
 
 
@@ -186,11 +194,18 @@ function SignUp(props) {
         <label>
           Password:
           <input
+            id="password1"
             name="password"
             type="password"
             placeholder="Enter your password"
             value={values.password || ''}
             onChange={handleChange} />
+
+            <input
+              id="password2"
+              name="password"
+              type="password"
+              placeholder="Confirm your password" />
 
             {errors.password && (
               <p className="error">{errors.password}</p>
