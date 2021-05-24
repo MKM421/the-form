@@ -2,6 +2,9 @@
 A sign up form created with React
 
 ## How to run the Form
+Install Node.js
+[https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
 Download or clone the repo:
 ```bash
 git clone https://github.com/MKM421/the-form.git
